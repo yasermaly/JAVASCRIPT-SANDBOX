@@ -8,12 +8,16 @@
 - symbol: Built-in object whose constructor returns a unique symbol.
 - BigInt: Numbers that are greater than the "Number" type can handle.
 
+- Primitive Data Types are stored in the 'stack', where it is accessed from.
+
 */
 
 /* Reference Types (OBJECTS)
 
 - Reference types or "Objects" are a non-primitive value and when assigned to a variable, the variable is given a refernce to that value.
 - Object literals, arrays, and functions are all references types.
+
+- Reference types are stored in the 'heap' and accessed by reference.
 
 */
 
