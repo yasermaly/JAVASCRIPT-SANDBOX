@@ -37,7 +37,7 @@ const todo = {
 
 const { id } = todo;
 
-console.log(id);
+console.log(id); // returns 1
 
 // we can create multiple variables and store their key values in them by placing more than one key between the curly braces.
 
