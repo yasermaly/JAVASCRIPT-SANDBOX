@@ -1,5 +1,5 @@
 // for each loop:
-// for each is higher order function. Meaning it takes one or  function as its argument, or returns a function as a result.
+// for each is high order function. Meaning it takes one or  function as its argument, or returns a function as a result.
 
 const socials = ['Twitter', 'Facebook', 'LinkedIn', 'Instagram'];
 

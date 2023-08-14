@@ -1,5 +1,5 @@
 // FILTER
-// filter is another higher order function. It's used to filter out just the needed data from an array and puts it in a new array.
+// filter is another high order function. It's used to filter out just the needed data from an array and puts it in a new array.
 
 const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction'];
 const filteredWords = words.filter((word) => word.length > 6);
