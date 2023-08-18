@@ -1,26 +1,42 @@
-// remove the clear all button:
-
+// remove() Method
 function removeClearButton() {
   const clearBtn = document.querySelector('#clear');
   clearBtn.remove();
 }
-removeClearButton();
 
-// remove first list item:
-
+// removeChild() Method
 function removeFirstItem() {
   const ul = document.querySelector('ul');
   const li = document.querySelector('li:first-child');
 
   ul.removeChild(li);
 }
-// removeFirstItem();
 
-// removing item by index:
+// Other examples
 
-function removeItem(index) {
+function removeItem(itemNumber) {
   const ul = document.querySelector('ul');
-  const li = document.querySelector(`li:nth-child(${index})`);
+  const li = document.querySelector(`li:nth-child(${itemNumber})`);
+
   ul.removeChild(li);
 }
-removeItem(4);
+
+function removeItem2(itemNumber) {
+  const ul = document.querySelector('ul');
+  const li = document.querySelectorAll('li')[itemNumber - 1];
+
+  ul.removeChild(li);
+}
+
+function removeItem3(itemNumber) {
+  const li = document.querySelectorAll('li');
+  li[itemNumber - 1].remove();
+}
+
+const removeItem4 = (itemNumber) =>
+  document.querySelectorAll('li')[itemNumber - 1].remove();
+
+removeClearButton();
+// removeFirstItem();
+// removeItem(2);
+removeItem4(2);
