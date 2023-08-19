@@ -14,6 +14,7 @@ const onClick = (e) => {
   console.log(e.screenX);
   console.log(e.screenY);
 };
+
 function onDrag(e) {
   document.querySelector('h1').textContent = `X ${e.clientX} Y ${e.clientY}`;
 }
