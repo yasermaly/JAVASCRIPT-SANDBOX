@@ -1,7 +1,7 @@
 const xhr = new XMLHttpRequest();
 
-// xhr.open('GET', './movies.json');
-xhr.open('GET', 'http://api.github.com/users/bradtraversy/repos');
+// xhr.open('GET', './movies.json'); // this will get the data from the json file in the folder
+xhr.open('GET', 'http://api.github.com/users/bradtraversy/repos'); // this will get the data from this link
 
 /*
 readyState has 5 possible values:
