@@ -13,5 +13,18 @@ const promise = new Promise((resolve, reject) => {
 promise
   .then((user) => {
     console.log(user);
+    return user.name;
+  })
+  .then((name) => {
+    console.log(name);
+    return name.length;
+  })
+  .then((nameLength) => {
+    console.log(nameLength);
+    return typeof nameLength;
+  })
+  .then((type) => {
+    console.log(type);
   })
   .catch((error) => console.log(error))
+  .then(() => console.log('This will run no matter what happens'));
