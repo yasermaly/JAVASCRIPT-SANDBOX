@@ -19,16 +19,55 @@ function getData(endpoint) {
   });
 }
 
-getData('./movies.json')
-  .then((movies) => {
-    console.log(movies);
-    return getData('./actors.json');
-  })
-  .then((actors) => {
-    console.log(actors);
-    return getData('./directors.json');
-  })
-  .then((directors) => {
-    console.log(directors);
-  })
-  .catch((error) => console.log(error));
+// getData('./movies.json')
+//   .then((movies) => {
+//     console.log(movies);
+//     return getData('./actors.json');
+//   })
+//   .then((actors) => {
+//     console.log(actors);
+//     return getData('./directors.json');
+//   })
+//   .then((directors) => {
+//     console.log(directors);
+//   })
+//   .catch((error) => console.log(error));
+
+//We're going to recreate the above commented out code using async await:
+
+async function getAllData() {
+  const movies = await getData('./movies.json');
+  const actors = await getData('./actors.json');
+  const directors = await getData('./directors.json');
+  console.log(movies, actors, directors);
+}
+getAllData();
+
+async function getAllDataWithFetch() {
+  const moviesRes = await fetch('./movies.json');
+  const movies = await moviesRes.json();
+
+  const actorsRes = await fetch('./actors.json');
+  const actors = await actorsRes.json();
+
+  const directorsRes = await fetch('./directors.json');
+  const directors = await directorsRes.json();
+
+  console.log(movies, actors, directors);
+}
+getAllDataWithFetch();
+
+async function getAllDataPromiseAll() {
+  const [moviesRes, actorsRes, directorsRes] = await Promise.all([
+    fetch('./movies.json'),
+    fetch('./actors.json'),
+    fetch('./directors.json'),
+  ]);
+
+  const movies = await moviesRes.json();
+  const actors = await actorsRes.json();
+  const directors = await directorsRes.json();
+
+  console.log(movies, actors, directors);
+}
+getAllDataPromiseAll();
